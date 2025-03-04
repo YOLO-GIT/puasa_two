@@ -7,24 +7,18 @@
     <link href="./src/output.css" rel="stylesheet">
 </head>
 
-<body>
-    <section class="slides">
-        <ul class="list">
-            <li class="slide">
-                <div class="absolute inset-0 w-full h-full">
-                    <img src="./assets/one.webp" alt="Static Background" class="gif" />
-                    <img src="./assets/two.webp" alt="Parallax Image" class="gif parallax" />
-                </div>
+<body class="overflow-x-hidden">
 
-                <div
-                    class="content text-4xl font-bold bg-gradient-to-r from-blue-300 via-blue-500 to-purple-600 text-transparent bg-clip-text background-animate">
-                    Happy New Year!!!
-                </div>
-            </li>
-        </ul>
+    <section class="overflow-x-hidden overflow-y-hidden parallax">
+        <!-- <img src="" id="struktur" alt="structure"> -->
+        <img src="assets/part_one/bg.webp" id="bg" alt="bg" />
+        <img src="assets/part_one/text.webp" id="text" alt="text" />
+        <img src="assets/part_one/side_left.webp" id="leaves_right" alt="two" />
+        <img src="assets/part_one/side_right.webp" id="leaves_left" alt="three" />
+        <img src="assets/part_one/others.webp" id="others" alt="four" />
     </section>
 
-    <section class="sec bg-gradient-to-r from-blue-950 to-blue-500">
+    <section class="sec bg-gradient-to-r from-blue-950 to-blue-500 mb-4 sm:mt-0 sm:mb-0">
         <h2 class="text-xs sm:text-3xl text-center font-semibold text-white">
             M E M O R I
         </h2>
@@ -106,6 +100,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./scripts/parallax.js"></script>
     <script src="./scripts/socials.js"></script>
     <script src="./scripts/main.js"></script>
 </body>
