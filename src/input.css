@@ -4,14 +4,6 @@
 @source "../node_modules/flowbite/dist/flowbite.js";
 
 @layer components {
-    * {
-        box-sizing: border-box;
-    }
-
-    body {
-        margin: 0;
-        padding: 0;
-    }
 
     body::-webkit-scrollbar {
         display: none;
@@ -138,60 +130,57 @@
         transform: translate(0%, 0%);
     }
 
-    .slides {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        position: relative;
-        z-index: 1;
-    }
-
-    .slides .list {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .slides .slide {
-        display: flex;
-        width: 100vw;
-        height: 100vh;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .slide .content {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        display: flex;
-        text-align: center;
-        width: 95%;
-        padding: 3rem;
-        margin: 0 auto;
-        box-sizing: border-box;
-        max-width: 40rem;
-        position: relative;
-        align-items: center;
-        text-transform: uppercase;
-        font-size: 4.6rem;
-        line-height: 1.25em;
-        font-weight: 500;
-    }
-
-    .gif {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-    }
-
+    /* For .parallax section */
     .parallax {
-        transform: translateY(0px);
-        transition: transform 0.1s ease-out;
+        @apply relative flex justify-center items-center;
+        height: 100vh;
+        /* Adjust as needed */
+    }
+
+    /* For .parallax section */
+    .parallax_mid {
+        @apply relative flex justify-center items-center;
+        height: 45vh;
+        /* Adjust as needed */
+    }
+
+    /* For .parallax section */
+    .parallax_mobile {
+        @apply relative flex justify-center items-center;
+        height: 31vh;
+        /* min-width: 320px */
+        /* Adjust as needed */
+    }
+
+    .parallax_second {
+        @apply relative flex justify-center items-center;
+        height: 110vh;
+        /* Adjust as needed */
+    }
+
+    .parallax_third {
+        @apply relative flex justify-center items-center;
+        height: 110vh;
+        /* Adjust as needed */
+    }
+
+    /* For images inside .parallax */
+    .parallax img {
+        @apply absolute top-0 left-0 w-full pointer-events-none;
+    }
+
+    /* For images inside .parallax */
+    .parallax_mid img {
+        @apply absolute top-0 left-0 w-full pointer-events-none;
+    }
+
+    /* For images inside .parallax */
+    .parallax_mobile img {
+        @apply absolute top-0 left-0 w-full pointer-events-none;
+    }
+
+    .parallax_third img {
+        @apply absolute top-0 left-0 w-full pointer-events-none;
     }
 
     .sec {
