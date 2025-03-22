@@ -268,7 +268,8 @@
         <div class="container mx-auto px-4 py-8 lg:py-16">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
                 <div class="w-full">
-                    <canvas width="400" height="230" id="image-sequence" class="rounded-2xl"></canvas>
+                    <!-- <canvas width="800" height="450" id="image-sequence" class="rounded-2xl"></canvas> -->
+                    <img src="4.jpg" class="rounded-2xl">
                 </div>
                 <div class="flex flex-col justify-center mt-5 sm:mt-0">
                     <h1 class="text-center sm:text-right max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-300"
@@ -370,9 +371,9 @@
             gsap.registerPlugin(ScrollTrigger);
             // looking for a non-scrubbing version? https://codepen.io/GreenSock/pen/QWYdgjG
 
-            let frameCount = 51;
+            let frameCount = 50;
             let urls = new Array(frameCount).fill().map((o, i) => {
-                let url = `assets/part_three/split/frame_${(i + 1)}.jpg`;
+                let url = `new_frame/frame_${(i + 1)}.jpg`;
                 console.log(`Image URL: ${url}`); // Debugging: Check the generated URLs
                 return url;
             });
@@ -382,10 +383,10 @@
                 canvas: "#image-sequence", // <canvas> object to draw images to
                 clear: true, // only necessary if your images contain transparency
                 scrollTrigger: {
-                    start: "center 70%", // start at the very top
-                    end: "center 30%", // entire page
+                    start: "top top", // start at the very top
+                    end: "bottom bottom", // entire page
                     scrub: true, // important!
-                    // markers: true,
+                    markers: true,
                     onUpdate: (self) => {
                         // When the scrolling animation completes
                         if (self.progress > 0.98) {
